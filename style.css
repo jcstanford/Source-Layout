@@ -1,0 +1,250 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /
+  top
+  background-color: rgb(246, 249, 252);
+
+  bottom
+  background-color: rgb(255, 255, 255);
+
+  nav ul text and all p: rgb(111, 123, 137)
+  non-nav text: rgb(58, 72, 89)
+  *******************************************/
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header, main, .features {
+    background-color: rgb(246, 249, 252);
+  }
+  
+  header span, h1, h2, h3 {
+    color: rgb(50, 62, 77);
+    font-weight: bold;
+  }
+
+  p {
+    color: rgb(111, 123, 137);
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+
+  header {
+    height: 100px;
+    font-size: 1.5rem;
+  }
+
+  header nav * {
+    float: left;
+  }
+
+  header nav span {
+    width: 25%; /* equal to 360px on laptop */
+    padding: 15px 0 15px 40px;
+    font-size: 2rem;
+  }
+
+  nav ul {
+    width: 50%; /* equal to 720px on laptop */
+    list-style: none;
+    padding-inline-start: 0; /* user agent stylesheet had 40px */
+    padding-left: 160px; /* 720 - 400 from li's = 320, divided by 2 */
+    padding-top: 5px;
+  }
+
+  header nav ul li, header nav ul li a {
+    text-decoration: none;
+    color: rgb(111, 123, 137);
+    font-weight: bold;
+    width: 100px;
+    padding: 0 10px;
+  }
+
+  .buttonContainer {
+    float: left;
+    width: 25%; /* equal to 360px on laptop */
+    height: 100px;
+    text-align: center;
+  }
+
+  .buttonContainer > button {
+    height: 35px;
+    width: 100px;
+    margin: 15px 0 0 190px;
+    border: none;
+    background-color: rgb(58, 72, 89);
+    color: white;
+  }
+
+  main > section {
+    float: left;
+    width: 50%;
+    height: 686px;
+    background-color: rgb(246, 249, 252);
+  }
+
+  main > #taglineSection {
+    padding: 100px;
+  }
+
+  main section h1 {
+    font-size: 3.5rem;
+    width: 60%;
+  }
+
+  main section form input {
+    background-color: rgb(227, 232, 239);
+    border: none;
+    padding: 10px;
+    width: 250px;
+    color: rgb(157, 169, 181);
+  }
+
+  main > section p {
+    font-size: 1.5rem;
+  }
+
+  #fieldControl {
+    float: left;
+  }
+
+  main section button {
+    height: 35.5px;
+    width: 70px;
+    border: none;
+    background-color: rgb(58, 72, 89);
+    color: white;
+  }
+
+  main section p {
+    width: 300px;
+    padding-top: 20px;
+  }
+
+  .features section {
+    width: 25%;
+    float: left;
+    background-color: rgb(246, 249, 252);
+    padding: 20px 70px 30px;
+  }
+
+  .features section h3 {
+    font-size: 2rem;
+  }
+
+  .features section p, .features section a, .features + section p {
+    font-size: 1.5rem;
+  }
+
+  .features img {
+    width: 15%;
+  }
+
+  .features section a {
+    color: rgb(50, 62, 77);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .features + section {
+    float: left;
+    margin: 20px 300px 30px 100px;
+    padding-right: 570px;
+  }
+
+  .features + section > h2 {
+    font-size: 2.5em;
+  }
+  /******************************************
+  /* MEDIA QUERIES
+  /*******************************************/
+  
+  @media screen and (max-width: 430px) {
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      margin: 0;
+      background-color: rgb(246, 249, 252);
+    }
+
+    header {
+      height: 60px;
+      width: 430px;
+      border-bottom: 1px solid rgb(232, 236, 242);
+      float: left;
+    }
+
+    header nav span {
+      font-size: 2.5rem;
+    }
+
+    header nav ul, header nav a, header a, .features, .features + section {
+      display: none;
+    }
+  
+    main > #taglineSection {
+      padding: 30px 15px;
+      width: 430px;
+    }
+  
+    main section h1 {
+      font-size: 2.55rem;
+      
+    }
+  
+    main section form input {
+      background-color: rgb(227, 232, 239);
+      border: none;
+      margin: 0;
+      padding: 10px;
+      color: rgb(157, 169, 181);
+    }
+  
+    main > section p {
+      font-size: 1.5rem;
+    }
+  
+    /* #fieldControl {
+          float: left;
+    } */
+  
+    /* main section button {
+      
+    } */
+  
+    main section p {
+      width: 300px;
+      padding-top: 20px;
+    }
+  
+
+
+
+  }
