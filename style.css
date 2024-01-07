@@ -63,6 +63,10 @@
     float: left;
   }
 
+  header nav div {
+    display: none;
+  }
+
   header nav span {
     width: 25%; /* equal to 360px on laptop */
     padding: 15px 0 15px 40px;
@@ -148,9 +152,11 @@
 
   .features section {
     width: 25%;
+    height: 232px;
     float: left;
     background-color: rgb(246, 249, 252);
     padding: 20px 70px 30px;
+    border: 1px solid black;
   }
 
   .features section h3 {
@@ -171,6 +177,7 @@
     text-decoration: none;
   }
 
+/* Bottom section after features */
   .features + section {
     float: left;
     margin: 20px 300px 30px 100px;
@@ -196,27 +203,39 @@
 
     header {
       height: 60px;
-      width: 430px;
+      width: 412px;
       border-bottom: 1px solid rgb(232, 236, 242);
+      /* float: left; */
+    }
+
+    header nav div {
+      display: inline;
       float: left;
+      width: 15%;
+    }
+
+    header nav div i {
+      padding: 15px
     }
 
     header nav span {
       font-size: 2.5rem;
+      height: 60px;
+      width: 85%;
+      padding-left: 100px;
     }
 
-    header nav ul, header nav a, header a, .features, .features + section {
+    header nav ul, header div, .features, .features + section {
       display: none;
     }
   
     main > #taglineSection {
       padding: 30px 15px;
-      width: 430px;
+      width: 412px;
     }
   
     main section h1 {
-      font-size: 2.55rem;
-      
+      font-size: 2.8rem;
     }
   
     main section form input {
@@ -230,14 +249,6 @@
     main > section p {
       font-size: 1.5rem;
     }
-  
-    /* #fieldControl {
-          float: left;
-    } */
-  
-    /* main section button {
-      
-    } */
   
     main section p {
       width: 300px;
