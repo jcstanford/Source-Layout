@@ -262,8 +262,12 @@
       width: 100%;
     }
 
+    main section + section {
+      width: 100%;
+    }
+
     main section + section img {
-      
+      width: 100%;
     }
   
 
